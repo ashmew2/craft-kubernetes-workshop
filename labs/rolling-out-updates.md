@@ -54,6 +54,8 @@ vim deployments/hello.yaml
 image: "kelseyhightower/hello:2.0.0"
 ```
 
+> Note: replicas: will also be updated if it is present in hello.yaml
+
 ```
 kubectl apply -f deployments/hello.yaml --record
 ```
