@@ -22,10 +22,11 @@ kubectl create -f services/monolith.yaml
 ```
 
 Use the `gcloud compute firewall-rules` command to allow traffic to the `monolith` service:
+Hint: use the '&' to avoid blocking the terminal with this command.
 
 ```
 gcloud compute firewall-rules create allow-monolith-nodeport \
-  --allow=tcp:8080
+  --allow=tcp:30010
 ```
 
 ## Exercise: Interact with the Monolith Service Remotely
@@ -37,7 +38,7 @@ gcloud compute instances list
 ```
 
 ```
-curl -k https://<EXTERNAL_IP>:8080
+curl -k https://<EXTERNAL_IP>:30010
 ```
 
 ### Quiz
@@ -100,7 +101,7 @@ gcloud compute instances list
 ```
 
 ```
-curl -k https://<EXTERNAL_IP>:8080
+curl -k https://<EXTERNAL_IP>:30010
 ```
 
 ## Tutorial: Remove Labels from Pods
