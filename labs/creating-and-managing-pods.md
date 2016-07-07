@@ -50,7 +50,7 @@ Pods are allocated a private IP address by default and cannot be reached outside
 
 ### Hints
 
-Use two terminals. One to run the `kubectl port-forward` command, and the other to issue `curl` commands.
+Use two terminals. One to run the `kubectl port-forward` command, and the other to issue `curl` commands or alternatively, use & with the port-forward command so that it does not block.
 
 ```
 kubectl port-forward monolith 10080:80
@@ -75,6 +75,7 @@ curl -H "Authorization: Bearer <token>" http://127.0.0.1:10080/secure
 ```
 
 > Use the JWT token from the previous login.
+> Hint: Use Ctrl+Insert to copy and Shift+Insert to paste text.
 
 ## Exercise: View the logs of a Pod
 
