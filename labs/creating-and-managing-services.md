@@ -25,7 +25,7 @@ Use the `gcloud compute firewall-rules` command to allow traffic to the `monolit
 
 ```
 gcloud compute firewall-rules create allow-monolith-nodeport \
-  --allow=tcp:31000
+  --allow=tcp:8080
 ```
 
 ## Exercise: Interact with the Monolith Service Remotely
@@ -37,7 +37,7 @@ gcloud compute instances list
 ```
 
 ```
-curl -k https://<EXTERNAL_IP>:31000
+curl -k https://<EXTERNAL_IP>:8080
 ```
 
 ### Quiz
@@ -100,7 +100,7 @@ gcloud compute instances list
 ```
 
 ```
-curl -k https://<EXTERNAL_IP>:31000
+curl -k https://<EXTERNAL_IP>:8080
 ```
 
 ## Tutorial: Remove Labels from Pods
